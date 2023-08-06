@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VSH Invoice Generator</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="license" href="https://www.opensource.org/licenses/mit-license/"> -->
+    <!-- <script src="i.js"></script> -->
+</head>
+
+<body>
+    <header style="font-size: 20px;">
+        <h1>Invoice</h1>
+        <address contenteditable>
+            <h3>From,</h3>
+            <p>Vision Secuirty Hub</p>
+            <p>Near Union Bank<br>Kanta Toli, Ranchi.</p>
+            <p>+91 7782812577</p>
+        </address>
+        <img alt="" style="width: 250px; margin-left: -4rem; position: absolute; opacity: 0.2; margin-bottom: 20rem;"
+            src="./assets/VISION_SECURITY__2_-removebg-preview.png">
+        <canvas id="qrcode-canvas" style="margin-left: 15rem;"></canvas>
+        <div style="margin-top: -5rem; margin-left: 31rem; font-size: 15px; position: relative; margin-bottom: 0rem;">
+            <strong>Bank Information</strong>
+            <p>
+                Name: Nawab Faisal<br>
+                A/n: 425802010106226<br>
+                IFSC code: UBIN0542580<br>
+                Bank: Union Bank of India
+            </p>
+        </div>
+
+    </header>
+
+    <article>
+        <address contenteditable>
+            <s>To,</s>
+            <p>Client Name<br>Client Phone No.<br>Client Address</p>
+        </address>
+        <table class="meta">
+            <tr>
+                <th><span contenteditable>Invoice #</span></th>
+                <td><span contenteditable><input type="number" placeholder="Quotation No."><span></td>
+            </tr>
+            <tr>
+                <th><span contenteditable>Date</span></th>
+                <td><span contenteditable><input type="date"></span></td>
+            </tr>
+            <tr>
+                <th><span contenteditable>Amount Due</span></th>
+                <td><span id="prefix" contenteditable>Rs.</span><span class="data">600.00</span></td>
+            </tr>
+
+        </table>
+        <table class="inventory">
+            <thead>
+                <tr>
+                    <th><span contenteditable>Item</span></th>
+                    <th><span contenteditable>Description</span></th>
+                    <th><span contenteditable>Rate</span></th>
+                    <th><span contenteditable>Quantity</span></th>
+                    <th><span contenteditable>Price</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a class="cut">-</a><span contenteditable>Cp plus Camera</span></td>
+                    <td><span contenteditable>2.4mp Analog</span></td>
+                    <td><span data-prefix>$</span><span contenteditable>1450.00</span></td>
+                    <td><span contenteditable>4</span></td>
+                    <td><span data-prefix>$</span><span class="data">5800.00</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <a class="add">+</a>
+
+        <table class="balance">
+            <tr>
+                <th><span contenteditable>Total</span></th>
+                <td><span data-prefix>$</span><span>600.00</span></td>
+            </tr>
+            <tr>
+                <th><span contenteditable>Amount Paid</span></th>
+                <td><span data-prefix>$</span><span contenteditable>0.00</span></td>
+            </tr>
+            <tr>
+                <th><span contenteditable>Balance Due</span></th>
+                <td><span data-prefix>$</span><span>600.00</span></td>
+            </tr>
+        </table>
+        <div style="padding-left: 19rem; padding-top: -1rem;">
+            <img src="./assets/Nawab-Sign.png" style="width: 100px; " />
+            <br>
+
+
+            <span style="font-size: 12px; text-decoration: underline; font-family:monospace;" id="generateQR">Signature
+                Generated<br>
+                From
+                Computer</span>
+
+
+        </div>
+
+    </article>
+    <aside>
+        <h1><span contenteditable>Additional Notes</span></h1>
+        <div contenteditable>
+            <p><span>&#9755;</span>
+                Thank you for choosing our services at VISION SECURITY HUB. We appreciate your business
+                and trust in our
+                products and solutions. <br>
+                <span>&#9755;</span>
+                Payment is due within 20 days from the date of this invoice.<br>
+                <span>&#9755;</span>
+                We accept payment via Cash and UPI.<br>
+                <span>&#9755;</span>For any billing inquiries or clarifications, please contact Us.<br>
+                <span>&#9755;</span>Please retain this invoice for your records.<br> <span>&#9755;</span>
+                If you have already made the payment, please disregard this notice.
+
+            </p>
+        </div>
+    </aside>
+
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+
+    <!-- <script type="text/javascript">
+        new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+    </script> -->
+</body>
+
+</html>
